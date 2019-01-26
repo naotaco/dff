@@ -5,3 +5,4 @@ authors = ["naota"]
 edition = "2018"
 
 [dependencies]
+walkdir = "*"
