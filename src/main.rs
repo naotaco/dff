@@ -27,9 +27,9 @@ fn main() -> Result<(), std::io::Error> {
     for k in filenames.keys() {
         match filenames.get(k) {
             Some(path_list) => {
-                println!("found: {:?}", path_list.iter().count());
+                println!("found: {:?} {:?}", path_list.iter().count(), k);
                 for p in path_list.iter() {
-                    println!("    {:?}", p);
+                    println!("    {:?}", p.to_string_lossy());
                 }
             }
             None => continue,
